@@ -39,10 +39,15 @@ animalBtns.forEach(element => {
         sound.currentTime = 0;
         sound.play();
 
+        element.classList.add("animal_jump")
         element.classList.add("animal_clicked")
     });
 
+    // Add an event listener for when the transition ends
+    // Reverse scaling transition
+    // Note that we keep opactiy the same.
     element.addEventListener('transitionend', (e) => {
-        element.classList.remove("animal_clicked")
+        element.classList.remove("animal_jump")
     });
+
 });
