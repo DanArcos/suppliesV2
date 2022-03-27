@@ -9,4 +9,9 @@
 
 .animal{
     height: 125px;
+    transition: all 0.2s ease-in-out;
+}
+
+.animal_clicked{
+    transform: scale(1.2);
 }

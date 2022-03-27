@@ -38,5 +38,11 @@ animalBtns.forEach(element => {
         let sound = document.querySelector(`audio[data-key="${e.target.alt}"]`)
         sound.currentTime = 0;
         sound.play();
+
+        element.classList.add("animal_clicked")
+    });
+
+    element.addEventListener('transitionend', (e) => {
+        element.classList.remove("animal_clicked")
     });
 });
