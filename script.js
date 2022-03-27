@@ -15,7 +15,12 @@ for (let i = 0; i < animals.length; i++) {
     btn.classList.add('animal')
     btn.textContent = currentAnimal;
 
-    artboard.appendChild(btn)
+    let img = document.createElement('img');
+    img.classList.add('animal')
+    img.src = "./images/" + currentAnimal + ".png";
+    img.alt = currentAnimal;
+
+    artboard.appendChild(img)
 
     // Create audio
     audio = document.createElement('audio')
@@ -29,8 +34,9 @@ for (let i = 0; i < animals.length; i++) {
 animalBtns = document.querySelectorAll(".animal")
 animalBtns.forEach(element => {
     element.addEventListener('click', (e) => {
-        console.log(e.target.textContent)
-        let sound = document.querySelector(`audio[data-key="${e.target.textContent}"]`)
+        console.log(e.target.alt)
+        let sound = document.querySelector(`audio[data-key="${e.target.alt}"]`)
+        sound.currentTime = 0;
         sound.play();
     });
 });
