@@ -31,6 +31,7 @@ for (let i = 0; i < animals.length; i++) {
 
 }
 
+let i = 0;
 animalBtns = document.querySelectorAll(".animal")
 animalBtns.forEach(element => {
     element.addEventListener('click', (e) => {
@@ -40,7 +41,20 @@ animalBtns.forEach(element => {
         sound.play();
 
         element.classList.add("animal_jump")
-        element.classList.add("animal_clicked")
+
+        // console.log(e.target.classList)
+        // console.log(!e.target.classList.contains("animal_clicked"))
+
+        if (!e.target.classList.contains("animal_clicked")) {
+            i++;
+            element.classList.add("animal_clicked")
+        }
+
+        if (i === 5) {
+            console.log("All animals have been clicked!")
+        }
+
+
     });
 
     // Add an event listener for when the transition ends

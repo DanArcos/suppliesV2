@@ -12,6 +12,12 @@ body{
 
 #container{
     height: 100vh;
+
+    /* background-image: url("./images/background.png");
+    background-repeat: no-repeat; 
+    background-position: top;
+    background-color: rgb(252, 229, 171); */
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,6 +35,8 @@ body{
 }
 
 .artboard {
+    /* background-color: white; */
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
