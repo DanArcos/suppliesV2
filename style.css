@@ -34,9 +34,20 @@ body{
     color: pink
 }
 
-.artboard {
+.artboard1 {
     /* background-color: white; */
 
+    display: flex;
+    flex-direction:  column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+    transition: all 3.0s ease-in-out;
+}
+
+.animalDiv{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -82,6 +93,17 @@ body{
     opacity:1.0;
 }
 
+.artboard1 p {
+    height: 20px;
+    opacity: 0.0;
+    transition: all 3.0s ease-in-out;
+}
+
+.p-fade-in {
+    opacity: 1;
+}
+
+ 
 
 .footer{
     display: flex;
